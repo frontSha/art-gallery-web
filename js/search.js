@@ -10,8 +10,10 @@ export const getSearch = async (searchInput, container) => {
       const { data } = await makeRequest(url);
   
       const searchResultsMessage = document.querySelector('.result-message');
-  
+      const goBackLink = document.querySelector('.home-link');
+
       container.innerHTML = '';
+      goBackLink.style.display = 'inline-block';
       searchResultsMessage.style.display = 'block';
   
       if (data.length) {
