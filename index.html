@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Artworks</title>
+</head>
+<body>
+  <div class="main-container">
+    <h1>Art Institute of Chicago - Artworks</h1>
+    <div class="search-bar">
+      <input type="search" name="search" id="search-input" class="search-input" placeholder="Search...">
+      <button id="search-button" class="search-button"><i class="ri-search-line"></i></button>
+    </div>
+    <p class="result-message"></p>
+    <div class="container" id="artworks-container"></div>
+    <div class="buttons">
+      <button id="previous-page">Previous page</button>
+      <button id="next-page">Next page</button>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
