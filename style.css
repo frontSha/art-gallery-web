@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -5,15 +7,22 @@
 }
 
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Manrope', 'Lucida Sans';
   background-color: rgb(238, 236, 236);
 }
 
+.main-container {
+  padding: 3rem 1.25rem;
+  width: clamp(300px, 90vw, 1600px);
+  margin: 0 auto;
+}
+
 .heading {
+  font-family: 'Noto Serif', serif;
   font-size: 2.4em;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
-  color: firebrick;
+  color: rgb(26, 26, 26);
 }
 
 .home-link {
@@ -25,27 +34,25 @@ body {
 }
 
 .home-link:hover {
-  color: rgb(34, 32, 163);
-}
-
-.main-container {
-  padding: 3rem 0;
+  color: rgb(26, 26, 26);
 }
 
 .container {
-  width: clamp(300px, 90vw, 1600px);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
-  justify-content: center;
-  column-gap: 40px;
-  row-gap: 60px;
-  color: rgb(34, 32, 163);
-  margin: 0 auto;
+  column-count: 3;
+  column-gap: 2.5rem;
+  color: rgb(26, 26, 26);
+  margin-bottom: 3rem;
 }
 
-img {
-  width: 300px;
-  height: 400px;
+.artworkContainer {
+  break-inside: avoid;
+  margin-bottom: 3rem;
+}
+
+.artworkContainer img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
   object-fit: cover;
   display: block;
 }
@@ -61,38 +68,42 @@ p {
   margin-top: 6px;
 }
 
-button {
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
   background-color: transparent;
   color: firebrick;
   width: 150px;
   padding: 12px 0;
   border: 2px solid firebrick;
   cursor: pointer;
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-inline: 10px;
   font-size: 1em;
   font-weight: 600;
 }
 
-button:hover {
+.buttons button:hover {
   background-color: firebrick;
   color: rgb(238, 236, 236);
 }
 
-.buttons {
-  text-align: center;
+.search-group {
+  width: fit-content;
+  margin: 4rem auto;
 }
 
 .search-bar {
-  width: fit-content;
+  width: 37.5rem;
   display: flex;
   justify-content: center;
-  margin: 4rem auto;
   border: 2px solid firebrick;
 }
 
 .search-input {
-  width: clamp(200px, 400px, 37.5rem);
+  width: 100%;
   padding: 12px;
   background-color: transparent;
   color: rgb(17, 17, 69);
@@ -115,6 +126,8 @@ button:hover {
   color: rgb(238, 236, 236);
   border: none;
   width: 50px;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .search-button:hover {
@@ -127,9 +140,31 @@ button:hover {
 
 .result-message {
   display: none;
-  font-size: 1.2em;
-  font-weight: 600;
-  color: firebrick;
-  text-align: center;
-  margin: 30px 0;
+  font-size: 1em;
+  font-weight: 500;
+  color: rgb(26, 26, 26);
+  margin: 20px 0;
+}
+
+/* responsive */
+@media (width < 800px) {
+  .container {
+    column-count: 2;
+  }
+}
+
+@media (width < 700px) {
+  .search-group {
+    width: 100%;
+  }
+  
+  .search-bar {
+    width: 100%;
+  }
+}
+
+@media (width < 480px) {
+  .container {
+    column-count: 1;
+  }
 }
